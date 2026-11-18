@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Ай`Мастер — ремонт телефонов и техники в Батайске</title>
+<meta name="description" content="Ай`Мастер — ремонтируем всё, что включается в розетку. Ремонт телефонов и техники в Батайске: ноутбуки, компьютеры, бытовая техника. Диагностика 500 ₽, выезд на дом, гарантия.">
+<meta name="theme-color" content="#0a0a0c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ай`Мастер — ремонт телефонов и техники в Батайске">
+<meta property="og:description" content="Ремонт телефонов, ноутбуков, компьютеров и бытовой техники. Диагностика 500 ₽, выезд на дом, гарантия.">
+<meta property="og:image" content="img/location/shop-front.webp">
+<meta property="og:locale" content="ru_RU">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ай`Мастер",
+"telephone":"+7 961 279-90-90",
+"address":{"@type":"PostalAddress","streetAddress":"ул. Луначарского, 188/11","addressLocality":"Батайск","addressRegion":"Ростовская область","addressCountry":"RU"},
+"openingHours":"Mo-Su 09:00-19:00","priceRange":"₽₽","image":"img/location/shop-front.webp",
+"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.4","reviewCount":"98"}}
+</script>
+<link rel="icon" href="img/logo.webp" type="image/webp">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- Шапка -->
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="#top" aria-label="Ай`Мастер — на главную">
+      <div class="brand__logo-wrap">
+        <img class="brand__logo" src="img/logo.webp" alt="Логотип Ай`Мастер" decoding="async">
+      </div>
+      <span class="brand__name">Ай`<b>Мастер</b></span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#prices">Цены</a>
+      <a href="#about">О нас</a>
+      <a href="#gallery">Фото</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="header__right">
+      <span class="header__hours">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Ежедневно<br><b>09:00–19:00</b></span>
+      </span>
+      <a class="btn btn--phone" href="tel:+79612799090" aria-label="Позвонить: +7 (961) 279-90-90">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="phone-btn__num">+7 (961) 279-90-90</span>
+      </a>
+      <button type="button" class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="sideMenu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Боковое меню -->
+<aside class="drawer" id="sideMenu" aria-hidden="true" aria-label="Меню">
+  <div class="drawer__head">
+    <span class="drawer__title">Меню</span>
+    <button type="button" class="drawer__close" id="drawerClose" aria-label="Закрыть меню">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="drawer__nav" aria-label="Навигация меню">
+    <a href="#services">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      Услуги
+    </a>
+    <a href="#prices">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      Цены
+    </a>
+    <a href="#about">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      О нас
+    </a>
+    <a href="#gallery">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      Фото
+    </a>
+    <a href="#faq">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      Вопросы
+    </a>
+    <a href="#contacts">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Контакты
+    </a>
+  </nav>
+  
+  <div class="drawer__contact">
+    <a class="btn btn--primary" href="tel:+79612799090" style="justify-content: center; margin-bottom: 10px;">Позвонить</a>
+    
+    <div class="drawer__messengers">
+      <a class="msgr-link" href="https://wa.me/79612799090" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="msgr-link" href="https://t.me/ВАШ_НИК" target="_blank" rel="noopener">Telegram</a>
+      <a class="msgr-link" href="https://vk.ru/imstr090" target="_blank" rel="noopener">ВКонтакте</a>
+      <a class="msgr-link" href="https://max.ru/u/ВАШ_ИД" target="_blank" rel="noopener">МАКС</a>
+    </div>
+  </div>
+
+  <div class="drawer__meta">
+    <p><b>Адрес:</b> ул. Луначарского, 188/11, Батайск</p>
+    <p><b>Режим работы:</b> Ежедневно 09:00–19:00</p>
+  </div>
+</aside>
+<div class="overlay" id="overlay" aria-hidden="true"></div>
+
+<main>
+  <!-- Первый экран -->
+  <section class="hero" id="top">
+    <div class="hero__overlay"></div>
+    <div class="container hero__inner">
+      <p class="hero__kicker reveal">Сервисный центр в Батайске</p>
+      <h1 class="hero__title reveal">Ай`Мастер — ремонтируем всё, что&nbsp;включается в&nbsp;розетку</h1>
+      <p class="hero__sub reveal">Смартфоны, ноутбуки, компьютеры и бытовая техника. Сначала диагностика — потом цена и срок. Вы платите за то, что согласовали, и не больше.</p>
+      <div class="hero__actions reveal">
+        <a class="btn btn--primary" href="tel:+79612799090">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Позвонить
+        </a>
+        <a class="btn btn--ghost" href="https://yandex.ru/maps/org/ay_master/173931310961/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Мы на Картах
+        </a>
+      </div>
+      <ul class="hero__facts reveal" role="list">
+        <li class="hero__fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Диагностика — 500 ₽</li>
+        <li class="hero__fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Выезд на дом</li>
+        <li class="hero__fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Оплата картой и наличными</li>
+      </ul>
+      <p class="hero__rating reveal"><span class="hero__badge">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        4,4</span> · 98 оценок на Яндекс Картах</p>
+    </div>
+  </section>
+
+  <!-- Бегущая строка -->
+  <div class="marquee" role="group" aria-label="Что мы ремонтируем">
+    <div class="marquee__track">
+      <div class="marquee__group">
+        <span class="chip">Телефоны</span><span class="chip">Планшеты</span><span class="chip">Ноутбуки</span><span class="chip">Компьютеры</span><span class="chip">Мониторы</span><span class="chip">Приставки</span><span class="chip">Бытовая техника</span><span class="chip">Холодильники</span><span class="chip">Кулеры</span><span class="chip">Роботы-пылесосы</span><span class="chip">Пылесосы</span><span class="chip">Кофемашины</span><span class="chip">Духовые шкафы</span><span class="chip">Утюги</span><span class="chip">Колонки</span><span class="chip">Винные шкафы</span><span class="chip">Светодиодные приборы</span><span class="chip">Восстановление данных</span><span class="chip">Выезд на дом</span>
+      </div>
+      <div class="marquee__group" aria-hidden="true">
+        <span class="chip">Телефоны</span><span class="chip">Планшеты</span><span class="chip">Ноутбуки</span><span class="chip">Компьютеры</span><span class="chip">Мониторы</span><span class="chip">Приставки</span><span class="chip">Бытовая техника</span><span class="chip">Холодильники</span><span class="chip">Кулеры</span><span class="chip">Роботы-пылесосы</span><span class="chip">Пылесосы</span><span class="chip">Кофемашины</span><span class="chip">Духовые шкафы</span><span class="chip">Утюги</span><span class="chip">Колонки</span><span class="chip">Винные шкафы</span><span class="chip">Светодиодные приборы</span><span class="chip">Восстановление данных</span><span class="chip">Выезд на дом</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Услуги (Слайдер) -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="slider-header reveal">
+        <div>
+          <h2>Что мы ремонтируем</h2>
+          <p class="section-sub" style="margin-bottom:0;">Листайте вправо, чтобы увидеть все категории.</p>
+        </div>
+        <div class="slider-controls">
+          <button type="button" class="slider-btn slider-btn--text" data-slider-prev aria-label="Назад">&larr;&nbsp;Назад</button>
+          <button type="button" class="slider-btn slider-btn--text" data-slider-next aria-label="Вперед">Вперед&nbsp;&rarr;</button>
+        </div>
+      </div>
+
+      <div class="slider-wrap reveal">
+        <div class="slider-container" id="sliderContainer">
+        <div class="slider-track" id="sliderTrack">
+          
+          <article class="service">
+            <div class="service__media"><img src="img/services_img/telephone.webp" alt="Ремонт телефонов" loading="lazy" onerror="this.remove()" decoding="async"></div>
+            <div class="service__body">
+              <h3 class="service__title">Телефоны</h3>
+              <p class="service__text">Дисплеи, разъёмы зарядки, аккумуляторы.</p>
+            </div>
+          </article>
+          
+          <article class="service">
+            <div class="service__media"><img src="img/services_img/tablet.webp" alt="Ремонт планшетов" loading="lazy" onerror="this.remove()" decoding="async"></div>
+            <div class="service__body">
+              <h3 class="service__title">Планшеты</h3>
+              <p class="service__text">Экраны, корпуса, питание, прошивка.</p>
+            </div>
+          </article>
+          
+          <article class="service">
+            <div class="service__media"><img src="img/services_img/laptop.webp" alt="Ремонт ноутбуков" loading="lazy" onerror="this.remove()" decoding="async"></div>
+            <div class="service__body">
+              <h3 class="service__title">Ноутбуки</h3>
+              <p class="service__text">Перегрев, чистка, замена деталей.</p>
+            </div>
+          </article>
+          
+          <article class="service">
+            <div class="service__media"><img src="img/services_img/сomputer.webp" alt="Ремонт компьютеров" loading="lazy" onerror="this.remove()" decoding="async"></div>
+            <div class="service__body">
+              <h3 class="service__title">Компьютеры</h3>
+              <p class="service__text">ПК, мониторы, приставки, геймпады.</p>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service__media"><img src="img/services_img/vacuum_cleaner.webp" alt="Ремонт бытовой техники" loading="lazy" onerror="this.remove()" decoding="async"></div>
+            <div class="service__body">
+              <h3 class="service__title">Бытовая техника</h3>
+              <p class="service__text">Стиральные машины, СВЧ, чайники.</p>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service__media"><img src="img/services_img/fridge.webp" alt="Ремонт холодильников" loading="lazy" onerror="this.remove()" decoding="async"></div>
+            <div class="service__body">
+              <h3 class="service__title">Холодильники</h3>
+              <p class="service__text">Ремонт на дому или в мастерской.</p>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service__media"><img src="img/services_img/cooler.webp" alt="Ремонт кулеров" loading="lazy" onerror="this.remove()" decoding="async"></div>
+            <div class="service__body">
+              <h3 class="service__title">Кулеры</h3>
+              <p class="service__text">Офисные и домашние кулеры.</p>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service__media"><img src="img/services_img/robot_vacuum_cleaner.webp" alt="Ремонт роботов-пылесосов" loading="lazy" onerror="this.remove()" decoding="async"></div>
+            <div class="service__body">
+              <h3 class="service__title">Роботы-пылесосы</h3>
+              <p class="service__text">Чистка, аккумуляторы, электроника.</p>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service__media"><img src="img/services_img/сoffee_machine.webp" alt="Ремонт кофемашин" loading="lazy" onerror="this.remove()" decoding="async"></div>
+            <div class="service__body">
+              <h3 class="service__title">Кофемашины</h3>
+              <p class="service__text">Чистка, декальцинация, ремонт.</p>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service__media"><img src="img/services_img/oven.webp" alt="Ремонт духовых шкафов" loading="lazy" onerror="this.remove()" decoding="async"></div>
+            <div class="service__body">
+              <h3 class="service__title">Духовые шкафы</h3>
+              <p class="service__text">Варочные панели, сенсоры, ТЭНы.</p>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service__media"><img src="img/services_img/Iron.webp" alt="Ремонт утюгов" loading="lazy" onerror="this.remove()" decoding="async"></div>
+            <div class="service__body">
+              <h3 class="service__title">Утюги</h3>
+              <p class="service__text">Отпариватели и парогенераторы.</p>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service__media"><img src="img/services_img/music_column.webp" alt="Ремонт колонок" loading="lazy" onerror="this.remove()" decoding="async"></div>
+            <div class="service__body">
+              <h3 class="service__title">Колонки</h3>
+              <p class="service__text">Питание, звук, Bluetooth.</p>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service__media"><img src="img/services_img/wine_cabinet.webp" alt="Ремонт винных шкафов" loading="lazy" onerror="this.remove()" decoding="async"></div>
+            <div class="service__body">
+              <h3 class="service__title">Винные шкафы</h3>
+              <p class="service__text">Компрессор, электроника, охлаждение.</p>
+            </div>
+          </article>
+
+          <article class="service">
+            <div class="service__media"><img src="img/services_img/led_devices.webp" alt="Ремонт светодиодных приборов" loading="lazy" onerror="this.remove()" decoding="async"></div>
+            <div class="service__body">
+              <h3 class="service__title">Светодиодные приборы</h3>
+              <p class="service__text">Лампы, светильники, подсветка.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="slider-nav">
+        <button type="button" class="slider-btn slider-btn--round" data-slider-prev aria-label="Назад">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button type="button" class="slider-btn slider-btn--round" data-slider-next aria-label="Вперед">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Цены -->
+  <section class="section section--alt" id="prices">
+    <div class="container">
+      <h2 class="reveal">Цены</h2>
+      <p class="section-sub reveal">Итоговая стоимость зависит от модели и запчастей — точную сумму называем после диагностики.</p>
+
+      <div class="prices reveal">
+        <h3 class="prices__group">Базовые услуги</h3>
+        <div class="prices__grid">
+          <div class="prices__item">
+            <div class="prices__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div>
+            <div class="prices__info"><span>Диагностика</span></div>
+            <div class="prices__cost"><b>500 ₽</b></div>
+          </div>
+          <div class="prices__item">
+            <div class="prices__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div class="prices__info"><span>Замена дисплея (работа)</span></div>
+            <div class="prices__cost"><b>500 ₽</b></div>
+          </div>
+          <div class="prices__item">
+            <div class="prices__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div class="prices__info"><span>Выезд и диагностика крупной техники</span></div>
+            <div class="prices__cost"><b>1 500 ₽</b></div>
+          </div>
+          <div class="prices__item">
+            <div class="prices__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <div class="prices__info"><span>Остальные виды ремонта</span></div>
+            <div class="prices__cost"><b>после диагностики</b></div>
+          </div>
+        </div>
+
+        <h3 class="prices__group">Техника</h3>
+        <div class="prices__grid">
+          <div class="prices__item">
+            <div class="prices__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></div>
+            <div class="prices__info"><span>Ноутбуки</span></div>
+            <div class="prices__cost"><b>от 1 500 ₽</b></div>
+          </div>
+          <div class="prices__item">
+            <div class="prices__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+            <div class="prices__info"><span>Планшеты, LED-приборы</span></div>
+            <div class="prices__cost"><b>от 500 ₽</b></div>
+          </div>
+          <div class="prices__item">
+            <div class="prices__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="prices__info"><span>Духовые шкафы и панели</span></div>
+            <div class="prices__cost"><b>от 1 500 ₽</b></div>
+          </div>
+          <div class="prices__item">
+            <div class="prices__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="4" y1="10" x2="20" y2="10"/></svg></div>
+            <div class="prices__info"><span>Холодильники</span></div>
+            <div class="prices__cost"><b>от 1 500 ₽</b></div>
+          </div>
+          <div class="prices__item">
+            <div class="prices__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+            <div class="prices__info"><span>Кофемашины, утюги</span></div>
+            <div class="prices__cost"><b>от 1 500 ₽</b></div>
+          </div>
+          <div class="prices__item">
+            <div class="prices__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></div>
+            <div class="prices__info"><span>Кулеры, пылесосы, колонки</span></div>
+            <div class="prices__cost"><b>от 1 000 ₽</b></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="price-note reveal">Полный список работ — в наших <a href="https://vk.ru/uslugi-94598408?screen=group" target="_blank" rel="noopener">услугах во ВКонтакте</a>.</p>
+    </div>
+  </section>
+
+  <!-- О центре -->
+  <section class="section" id="about">
+    <div class="container about__inner">
+      <div class="about__text">
+        <h2 class="reveal">О центре</h2>
+        <p class="reveal">«Ай`Мастер» — сервисный центр на ул. Луначарского, 188/11 в Батайске. Мы находимся в двух шагах от остановки «Комсомольская улица».</p>
+        <p class="reveal">Ремонтируем то, что включается в розетку: телефоны, ноутбуки, стационарные компьютеры, мониторы, оргтехнику, игровые приставки и бытовую технику — от СВЧ-печи до холодильника. Для крупной техники выезжаем на дом.</p>
+        <p class="reveal">Как мы работаем: сначала диагностика, потом — цена и срок. Согласны — чиним, не согласны — забираете технику и платите только за диагностику. Общий рейтинг 4,4 из 5 на Яндекс Картах.</p>
+      </div>
+      <div class="about__visual reveal">
+        <img src="img/location/street.webp" alt="Зал сервисного центра Ай`Мастер" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- Галерея -->
+  <section class="section section--alt" id="gallery">
+    <div class="container">
+      <h2 class="reveal">Как нас найти</h2>
+      <p class="section-sub reveal">Наш сервис на Луначарского — так он выглядит с улицы и изнутри.</p>
+      <div class="gallery reveal">
+        <figure class="gallery__item">
+          <img src="img/location/shop-front.webp" alt="Вывеска сервиса" loading="lazy" onerror="this.closest('.gallery__item').style.display='none'" decoding="async">
+          <figcaption>Вывеска на Луначарского</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="img/location/street.webp" alt="Зал сервиса" loading="lazy" onerror="this.closest('.gallery__item').style.display='none'" decoding="async">
+          <figcaption>Зал с витриной</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="img/location/street.jpeg" alt="Вид на здание" loading="lazy" onerror="this.closest('.gallery__item').style.display='none'" decoding="async">
+          <figcaption>Луначарского, 188/11</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2 class="reveal">Частые вопросы</h2>
+      <div class="faq__grid reveal">
+        <details>
+          <summary>Сколько стоит диагностика?</summary>
+          <p>Диагностика стоит 500 ₽. Если это крупная техника и нужен выезд — 1500 ₽ вместе с выездом и диагностикой.</p>
+        </details>
+        <details>
+          <summary>Сколько займёт ремонт?</summary>
+          <p>Зависит от неисправности и наличия запчастей. После диагностики мастер назовёт срок и цену — вы решаете, ремонтировать или нет.</p>
+        </details>
+        <details>
+          <summary>Даёте ли гарантию?</summary>
+          <p>Да, на выполненные работы даём гарантию. Срок зависит от вида ремонта — уточняйте при сдаче техники.</p>
+        </details>
+        <details>
+          <summary>Можно ли починить при мне?</summary>
+          <p>Если нужная запчасть есть в наличии — обычно да. Если нет, заказываем деталь и связываемся с вами, когда она придёт.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section class="section section--alt" id="contacts">
+    <div class="container">
+      <h2 class="reveal">Контакты</h2>
+      
+      <div class="contacts__grid reveal">
+        <div class="contacts__info">
+          <ul class="contacts__list" role="list">
+            <li class="contacts__item">
+              <span class="contacts__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Адрес</span>
+              <span>ул. Луначарского, 188/11, Батайск</span>
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Телефон</span>
+              <a href="tel:+79612799090">+7 (961) 279-90-90</a>
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Режим работы</span>
+              <span>Ежедневно, 09:00–19:00</span>
+            </li>
+          </ul>
+          <div class="pay-chips">
+            <span class="chip">Карта</span><span class="chip">Наличные</span><span class="chip">QR-код</span><span class="chip">Wi-Fi в зале</span>
+          </div>
+        </div>
+
+        <div class="contacts__messengers">
+          <h3>Написать нам</h3>
+          <p>Выберите удобный мессенджер — откроется чат с сервисным центром.</p>
+          <div class="msgr-grid">
+            <a class="msgr msgr--wa" href="https://wa.me/79612799090" target="_blank" rel="noopener"><span>WhatsApp</span></a>
+            <a class="msgr msgr--tg" href="https://t.me/ВАШ_НИК" target="_blank" rel="noopener"><span>Telegram</span></a>
+            <a class="msgr msgr--vk" href="https://vk.ru/imstr090" target="_blank" rel="noopener"><span>ВКонтакте</span></a>
+            <a class="msgr msgr--max" href="https://max.ru/u/ВАШ_ИД" target="_blank" rel="noopener"><span>МАКС</span></a>
+          </div>
+          <a class="btn btn--primary contacts__route" href="https://yandex.ru/maps/org/ay_master/173931310961/" target="_blank" rel="noopener">
+            Построить маршрут
+          </a>
+        </div>
+      </div>
+
+      <div class="contacts__map reveal">
+        <iframe src="https://yandex.ru/map-widget/v1/?text=%D0%91%D0%B0%D1%82%D0%B0%D0%B9%D1%81%D0%BA%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9B%D1%83%D0%BD%D0%B0%D1%87%D0%B0%D1%80%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C%20188%2F11&z=17" title="Ай`Мастер на карте" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Подвал -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__col">
+        <h3>Контакты</h3>
+        <ul class="footer__contacts" role="list">
+          <li><a href="tel:+79612799090">+7 (961) 279-90-90</a></li>
+          <li>ул. Луначарского, 188/11, Батайск</li>
+          <li>Ежедневно 09:00–19:00</li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Реквизиты</h3>
+        <ul class="footer__links" role="list">
+          <li>ИП «Ай`Мастер»</li>
+          <li>ИНН __________</li>
+          <li>ОГРНИП __________</li>
+          <li>E-mail: <a href="mailto:info@aimaster61.ru">info@aimaster61.ru</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Разработка</h3>
+        <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 8px;">Сайт разработан:</p>
+        <a href="mailto:energiekost.code@mail.ru" style="color: var(--yellow); text-decoration: none; font-weight: 600;">energiekost.code@mail.ru</a>
+      </div>
+    </div>
+    
+    <div class="footer__bottom">
+      <nav class="footer__legal" aria-label="Правовая информация">
+        <a href="#" data-legal="privacy">Политика конфиденциальности</a> ·
+        <a href="#" data-legal="cookie">Использование cookie</a> ·
+        <a href="#" data-legal="offer">Оферта</a>
+      </nav>
+      <p>© Ай`Мастер, <span id="currentYear">2026</span>. Все права защищены.</p>
+      <p class="footer__note">Информация на сайте не является публичной офертой.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Правовой попап -->
+<div class="modal" id="legalModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="legalTitle">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__dialog" role="document">
+    <div class="modal__head">
+      <h3 class="modal__title" id="legalTitle">Правовая информация</h3>
+      <button type="button" class="modal__close" data-modal-close aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal__tabs">
+      <button type="button" class="modal__tab active" data-tab="privacy">152-ФЗ</button>
+      <button type="button" class="modal__tab" data-tab="cookie">Cookie</button>
+      <button type="button" class="modal__tab" data-tab="offer">Оферта</button>
+    </div>
+    <div class="modal__body">
+      <div class="modal__pane active" data-pane="privacy">
+        <h4>Политика в отношении обработки персональных данных</h4>
+        <p>Настоящая Политика определяет порядок обработки персональных данных и меры по обеспечению их безопасности, применяемые сервисным центром «Ай`Мастер» (далее — Оператор).</p>
+        <p>1. Оператор. Оператор персональных данных — сервисный центр «Ай`Мастер». Адрес: 346880, Ростовская обл., г. Батайск, ул. Луначарского, 188/11. Контакты: +7 (961) 279-90-90.</p>
+        <p>2. Состав обрабатываемых данных. Сайт не содержит форм для ввода персональных данных и не собирает, не хранит и не передаёт данные посетителей. Обращение в сервисный центр через мессенджеры или по телефону — добровольное действие посетителя.</p>
+        <p>3. Цели обработки. Связь с клиентом при обращении; согласование диагностики, цены и срока ремонта; исполнение договора об оказании услуг.</p>
+        <p>4. Правовые основания. Персональные данные обрабатываются только в случае, если посетитель сам передаёт их при обращении по телефону или в мессенджере, в объёме, необходимом для связи и оказания услуги.</p>
+        <p>5. Права субъекта. Вы вправе: получать информацию об обработке своих данных; требовать их уточнения, блокирования или уничтожения; отозвать согласие, позвонив по телефону.</p>
+        <p>6. Хранение и защита. Данные хранятся не дольше, чем этого требуют цели обработки и законодательство РФ.</p>
+      </div>
+      <div class="modal__pane" data-pane="cookie">
+        <h4>Использование файлов Cookie</h4>
+        <p>Для корректной работы интерфейса сайта мы используем технические файлы cookie и данные localStorage: они запоминают, что вы уже видели уведомление об использовании cookie, и состояние интерфейса.</p>
+        <p>Cookie не содержат персональных данных и не позволяют идентифицировать конкретного посетителя. Мы не используем рекламные и аналитические трекеры и не передаём cookie третьим лицам.</p>
+        <p>Вы можете отключить cookie в настройках браузера. Это может повлиять на корректную работу отдельных элементов сайта.</p>
+      </div>
+      <div class="modal__pane" data-pane="offer">
+        <h4>Уведомление об отсутствии публичной оферты</h4>
+        <p>В связи со спецификой ремонта техники и регулярным изменением цен на запчасти и комплектующие, вся информация на сайте носит исключительно ознакомительный и справочный характер.</p>
+        <p>Ни один элемент сайта, включая указания на услуги и цены, не является публичной офертой в смысле статьи 437 Гражданского кодекса РФ.</p>
+        <p>Возможность ремонта, актуальные цены и сроки определяются после диагностики и согласуются с вами до начала работ. Согласны — чиним, не согласны — забираете технику и платите только за диагностику.</p>
+        <p>Уточнить информацию можно по телефону +7 (961) 279-90-90 или лично по адресу: г. Батайск, ул. Луначарского, 188/11.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cookie-плашка -->
+<div class="cookiebar" id="cookieBar" aria-hidden="true" role="dialog" aria-label="Использование cookie">
+  <p class="cookiebar__text">Мы используем cookie для корректной работы сайта. Подробнее — <a href="#" data-legal="cookie">в политике cookie</a>.</p>
+  <div class="cookiebar__actions">
+    <button type="button" class="btn btn--primary" id="cookieAccept">Принять все</button>
+    <button type="button" class="btn btn--ghost" id="cookieNecessary">Только необходимые</button>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
